@@ -9,8 +9,14 @@ The tool prompts you for the following:
 * the number of times you plan on traveling on this route each week during peak hours
 * the number of weeks per month
 
+After that, it returns a table of costs for each subscription sorted by ascending price. This way, you can decide which subscription to buy!
+
 ## Usage
 
 ```bash
 python ns.py
 ```
+
+## Dependences
+* tabulate
+* pandas
