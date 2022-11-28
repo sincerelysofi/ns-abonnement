@@ -11,20 +11,22 @@ from sys import argv
 from tabulate import tabulate
 import pandas as pd
 
-'''
-Each Subscription has the following:
-    A name
-    A minimum cost
-    A maximum cost
-'''
+
 class Subscription:
+    '''
+    Each Subscription has the following:
+        A name
+        A cost
+        A multiplier for peak hours
+        A multiplier for offpeak hours
+       
+        A function for getting the total cost for a given trip and frequency
+    '''
     def __init__(self, name, cost, daluren, spits):
         self.name = name
         self.cost = cost
         self.spits = spits
         self.daluren = daluren
-        #self.min = cost+16.9*(daluren*offpeak+spits*peak)*month
-        #self.max = self.min+2.36*rides # 1.22 (bus) + 1.14 (tram)
 
     def get_cost(self, distance_cost, offpeak, peak, weeks_per_month):
         multiplier = offpeak * self.daluren + peak * self.spits
