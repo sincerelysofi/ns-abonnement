@@ -17,6 +17,10 @@ After that, it returns a table of costs for each subscription sorted by ascendin
 python ns.py
 ```
 
+## Screenshot
+
+![ScreenShot](screenshot.png)
+
 ## Dependences
 * tabulate
 * pandas
